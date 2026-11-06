@@ -105,14 +105,14 @@
     <!-- ============================================== -->
     <div id="screenLogin" class="flex-1 flex flex-col justify-between p-6 relative">
       <button onclick="toggleTheme()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center transition-colors z-50 shadow">
-        <i id="themeIconLogin" class="fa-solid fa-sun"></i>
+        <i id="themeIconLogin" class="fa-solid fa-meteor"></i>
       </button>
 
       <div class="text-center pt-8">
         <div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-pitch-500 via-emerald-600 to-pitch-800 flex items-center justify-center text-white mx-auto shadow-2xl shadow-emerald-900/50 mb-3 border border-emerald-400/30">
           <i class="fa-solid fa-futbol text-4xl animate-bounce"></i>
         </div>
-        <h1 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">Associação FC</h1>
+        <h1 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white">Associação Dos Cabras FC</h1>
         <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Portal Oficial do Atleta & Diretoria</p>
 
         <div class="flex bg-slate-100 dark:bg-slate-950/80 p-1.5 rounded-2xl border border-slate-300 dark:border-slate-800 mt-6 max-w-xs mx-auto">
@@ -128,9 +128,9 @@
       <form id="formMemberLogin" onsubmit="handleMemberLogin(event)" class="space-y-4 my-auto">
         <div class="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 p-4 rounded-2xl space-y-3">
           <div>
-            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">WhatsApp ou CPF do Atleta</label>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">WhatsApp/Usuário</label>
             <div class="relative">
-              <i class="fa-solid fa-phone absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
+              <i class="fa-solid fa-user absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
               <input type="text" id="loginMemberPhone" required placeholder="Ex: 75991234567" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl pl-8 pr-3 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-pitch-500">
             </div>
           </div>
@@ -161,7 +161,7 @@
             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Senha Master</label>
             <div class="relative">
               <i class="fa-solid fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 text-xs"></i>
-              <input type="password" id="loginAdminPass" required value="123456" placeholder="123456" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl pl-8 pr-3 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-pitch-500">
+              <input type="password" id="loginAdminPass" required value="" placeholder="******" class="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl pl-8 pr-3 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-pitch-500">
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@
       </form>
 
       <div class="text-center text-[11px] text-slate-500 pb-2">
-        <span>© Associação Esportiva Comunitária</span>
+        <span>© Associação Dos Cabras FC</span>
       </div>
     </div>
 
@@ -188,7 +188,7 @@
             </div>
             <div>
               <h1 class="text-base font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
-                Associação FC
+                Associação Dos Cabras FC
                 <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
               </h1>
               <p id="topBarUserBadge" class="text-xs text-slate-500 dark:text-slate-400 font-medium">Conectado</p>
@@ -196,7 +196,7 @@
           </div>
           <div class="flex items-center gap-2">
             <button onclick="toggleTheme()" class="w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors border border-slate-300 dark:border-slate-700">
-              <i id="themeIconApp" class="fa-solid fa-sun text-xs"></i>
+              <i id="themeIconApp" class="fa-solid fa-meteor text-xs"></i>
             </button>
             <button onclick="logout()" class="px-2.5 py-1.5 text-xs font-semibold rounded-xl transition-all duration-200 flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-rose-100 dark:hover:bg-rose-950/40 hover:text-rose-600 dark:hover:text-rose-400 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700">
               <i class="fa-solid fa-arrow-right-from-bracket text-xs"></i>
@@ -448,7 +448,7 @@
           </div>
         </div>
 
-        <!-- ABA 4: RANKING (NOVA) -->
+        <!-- ABA 4: RANKING -->
         <div id="tabContentRanking" class="hidden space-y-4">
           <div class="bg-gradient-to-br from-amber-100 dark:from-amber-950/40 to-white dark:to-slate-900 border border-amber-200 dark:border-amber-600/40 rounded-2xl p-4 shadow-lg text-center">
             <i class="fa-solid fa-trophy text-amber-500 text-3xl mb-2"></i>
@@ -614,12 +614,17 @@
       <form id="matchConfigForm" onsubmit="handleSaveMatchConfig(event)" class="space-y-3">
         <div><label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Data/Hora</label><input type="text" id="formMatchDateTime" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white"></div>
         <div><label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Local</label><input type="text" id="formMatchLocation" required class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white"></div>
-        <div><label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Limite Vagas</label><select id="formMatchMaxPlayers" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white">
-            <option value="12">12 (6x6)</option>
-            <option value="18">18 (3 times de 6)</option>
-            <option value="24">24 (4 times de 6)</option>
-          </select></div>
-        <div class="pt-2 flex gap-2"><button type="button" onclick="resetMatchPresenceList()" class="py-2 px-2.5 bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 rounded-xl text-xs font-bold">Zerar Lista</button><button type="submit" class="flex-1 py-2 bg-pitch-600 text-white rounded-xl text-xs font-bold">Salvar</button></div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Limite Máx. de Vagas</label>
+          <select id="formMatchMaxPlayers" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white">
+            <option value="12">12 Vagas (3 times de 4)</option>
+            <option value="16">16 Vagas (4 times de 4)</option>
+            <option value="20">20 Vagas (5 times de 4)</option>
+            <option value="24">24 Vagas (6 times de 4)</option>
+            <option value="99">Sem Limite</option>
+          </select>
+        </div>
+        <div class="pt-2 flex gap-2"><button type="button" onclick="resetMatchPresenceList()" class="py-2 px-2.5 bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 rounded-xl text-xs font-bold">Zerar Lista</button><button type="submit" class="flex-1 py-2 bg-pitch-600 text-white rounded-xl text-xs font-bold">Salvar Partida</button></div>
       </form>
     </div>
   </div>
@@ -673,8 +678,8 @@
       { id: '3', name: 'Marcos Vinícius (Marcão)', position: 'Zagueiro', category: 'Aspirantes', phone: '75999881122', pin: '1234', skill: 3, isApto: false, inaptReason: 'Estiramento', paidMonth: true, points: 0, matchesPlayed: 0, avatar: '' }
     ];
 
-    let defaultMatchConfig = { dateTime: 'Sábado, 16:30h', location: 'Arena Central de Futebol', maxCapacity: 18, confirmedIds: ['1', '2'], publishedTeams: [], resultRegistered: false };
-    let defaultPixConfig = { type: 'Telefone', key: '75999998888', holder: 'Associação Futebol Clube', monthlyFee: '30,00' };
+    let defaultMatchConfig = { dateTime: 'Sábado, 16:30h', location: 'Arena Edite', maxCapacity: 18, confirmedIds: ['1', '2'], publishedTeams: [], resultRegistered: false };
+    let defaultPixConfig = { type: 'Telefone', key: '75999998888', holder: 'Associação Dos Cabras FC', monthlyFee: '10,00' };
 
     let members = [];
     let matchConfig = { ...defaultMatchConfig };
@@ -715,7 +720,7 @@
     function updateThemeIcons(theme) {
       const iconLogin = document.getElementById('themeIconLogin');
       const iconApp = document.getElementById('themeIconApp');
-      const iconClass = theme === 'light' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+      const iconClass = theme === 'light' ? 'fa-solid fa-moon' : 'fa-solid fa-meteor';
       if (iconLogin) iconLogin.className = iconClass;
       if (iconApp) iconApp.className = iconClass + ' text-xs';
     }
@@ -1004,10 +1009,9 @@
        ========================================================= */
     function renderMatchSection() {
       document.getElementById('matchDateDisplay').innerText = matchConfig.dateTime; document.getElementById('matchLocationDisplay').innerText = matchConfig.location;
-      document.getElementById('matchMaxCapacity').innerText = matchConfig.maxCapacity;
+
       const confirmedCount = matchConfig.confirmedIds.length;
-      document.getElementById('matchConfirmedCount').innerText = confirmedCount; document.getElementById('listConfirmedCount').innerText = Math.min(confirmedCount, matchConfig.maxCapacity);
-      document.getElementById('matchProgressBar').style.width = `${Math.min(Math.round((confirmedCount / matchConfig.maxCapacity) * 100), 100)}%`;
+      document.getElementById('matchConfirmedCount').innerText = confirmedCount;
 
       if (currentAuthSession?.role === 'member') {
         const isConfirmed = matchConfig.confirmedIds.includes(currentAuthSession.memberId), btn = document.getElementById('btnMemberTogglePresence');
@@ -1018,7 +1022,20 @@
       }
 
       const confirmedContainer = document.getElementById('confirmedListContainer'), waitingContainer = document.getElementById('waitingListContainer'), waitingBlock = document.getElementById('waitingListBlock');
-      const max = parseInt(matchConfig.maxCapacity, 10), mainConfirmedIds = matchConfig.confirmedIds.slice(0, max), waitingIds = matchConfig.confirmedIds.slice(max);
+      const max = parseInt(matchConfig.maxCapacity, 10);
+      const mainConfirmedIds = matchConfig.maxCapacity === 99 ? matchConfig.confirmedIds : matchConfig.confirmedIds.slice(0, max);
+      const waitingIds = matchConfig.maxCapacity === 99 ? [] : matchConfig.confirmedIds.slice(max);
+
+      // Atualiza interface de progresso
+      if (matchConfig.maxCapacity === 99) {
+        document.getElementById('matchMaxCapacity').innerText = 'Ilimitadas';
+        document.getElementById('matchProgressBar').style.width = `100%`;
+        document.getElementById('listConfirmedCount').innerText = confirmedCount;
+      } else {
+        document.getElementById('matchMaxCapacity').innerText = matchConfig.maxCapacity;
+        document.getElementById('listConfirmedCount').innerText = Math.min(confirmedCount, matchConfig.maxCapacity);
+        document.getElementById('matchProgressBar').style.width = `${Math.min(Math.round((confirmedCount / matchConfig.maxCapacity) * 100), 100)}%`;
+      }
 
       if (mainConfirmedIds.length === 0) { confirmedContainer.innerHTML = `<div class="text-center py-6 bg-white dark:bg-slate-800/40 rounded-xl border border-dashed border-slate-300 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-xs">Ninguém confirmou ainda.</div>`; }
       else {
@@ -1060,21 +1077,30 @@
     }
 
     function openModalEditMatch() {
-      document.getElementById('formMatchDateTime').value = matchConfig.dateTime; document.getElementById('formMatchLocation').value = matchConfig.location;
-      document.getElementById('formMatchMaxCapacity').value = matchConfig.maxCapacity; document.getElementById('modalEditMatch').classList.remove('hidden');
+      document.getElementById('formMatchDateTime').value = matchConfig.dateTime;
+      document.getElementById('formMatchLocation').value = matchConfig.location;
+      document.getElementById('formMatchMaxPlayers').value = matchConfig.maxCapacity;
+      document.getElementById('modalEditMatch').classList.remove('hidden');
     }
     function closeModalEditMatch() { document.getElementById('modalEditMatch').classList.add('hidden'); }
+
     function handleSaveMatchConfig(e) {
-      e.preventDefault(); matchConfig.dateTime = document.getElementById('formMatchDateTime').value.trim(); matchConfig.location = document.getElementById('formMatchLocation').value.trim();
-      matchConfig.maxCapacity = parseInt(document.getElementById('formMatchMaxCapacity').value, 10);
-      saveMatchData(); closeModalEditMatch(); showToast('Configurações da pelada salvas!');
+      e.preventDefault();
+      matchConfig.dateTime = document.getElementById('formMatchDateTime').value.trim();
+      matchConfig.location = document.getElementById('formMatchLocation').value.trim();
+      matchConfig.maxCapacity = parseInt(document.getElementById('formMatchMaxPlayers').value, 10);
+      saveMatchData();
+      closeModalEditMatch();
+      showToast('Configurações da pelada salvas!');
     }
+
     function resetMatchPresenceList() { matchConfig.confirmedIds = []; matchConfig.resultRegistered = false; saveMatchData(); closeModalEditMatch(); showToast('Lista zerada!'); }
 
     function copyMatchListToClipboard() {
       const max = parseInt(matchConfig.maxCapacity, 10);
       let text = `⚽ *LISTA DA PELADA*\n📅 ${matchConfig.dateTime}\n📍 ${matchConfig.location}\n\n*CONFIRMADOS:*\n`;
-      matchConfig.confirmedIds.slice(0, max).forEach((id, idx) => {
+      const confirmados = matchConfig.maxCapacity === 99 ? matchConfig.confirmedIds : matchConfig.confirmedIds.slice(0, max);
+      confirmados.forEach((id, idx) => {
         const m = members.find(item => item.id === id); if (m) text += `${idx + 1}. ${m.name}\n`;
       });
       text += `\n🔑 PIX: ${pixConfig.key} (R$ ${pixConfig.monthlyFee})`; copyToClipboard(text, 'Lista copiada!');
@@ -1084,11 +1110,11 @@
        SORTEIO DE TIMES COM NOVO SISTEMA DE "TAMANHO MÁXIMO"
        ========================================================= */
     const teamColors = [
-      { name: 'Amarelo', bg: 'bg-amber-100 dark:bg-amber-500/20', border: 'border-amber-300 dark:border-amber-500/50', badge: 'bg-amber-500 text-white dark:text-slate-950' },
-      { name: 'Azul', bg: 'bg-sky-100 dark:bg-sky-500/20', border: 'border-sky-300 dark:border-sky-500/50', badge: 'bg-sky-500 text-white dark:text-slate-950' },
-      { name: 'Vermelho', bg: 'bg-rose-100 dark:bg-rose-500/20', border: 'border-rose-300 dark:border-rose-500/50', badge: 'bg-rose-500 text-white' },
-      { name: 'Preto', bg: 'bg-slate-200 dark:bg-slate-700/30', border: 'border-slate-400 dark:border-slate-600', badge: 'bg-slate-700 dark:bg-slate-600 text-white' },
-      { name: 'Branco', bg: 'bg-slate-50 dark:bg-slate-800/30', border: 'border-slate-300 dark:border-slate-500', badge: 'bg-white text-slate-800 border border-slate-300' }
+      { name: 'Time-01', bg: 'bg-amber-100 dark:bg-amber-500/20', border: 'border-amber-300 dark:border-amber-500/50', badge: 'bg-amber-500 text-white dark:text-slate-950' },
+      { name: 'Time-02', bg: 'bg-sky-100 dark:bg-sky-500/20', border: 'border-sky-300 dark:border-sky-500/50', badge: 'bg-sky-500 text-white dark:text-slate-950' },
+      { name: 'Time-03', bg: 'bg-rose-100 dark:bg-rose-500/20', border: 'border-rose-300 dark:border-rose-500/50', badge: 'bg-rose-500 text-white' },
+      { name: 'Time-04', bg: 'bg-slate-200 dark:bg-slate-700/30', border: 'border-slate-400 dark:border-slate-600', badge: 'bg-slate-700 dark:bg-slate-600 text-white' },
+      { name: 'Time-05', bg: 'bg-slate-50 dark:bg-slate-800/30', border: 'border-slate-300 dark:border-slate-500', badge: 'bg-white text-slate-800 border border-slate-300' }
     ];
 
     function executeTeamsDraw() {
